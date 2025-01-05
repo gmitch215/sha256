@@ -576,7 +576,7 @@ void sha256_init(SHA256_CTX *ctx)
 
 void sha256_update(SHA256_CTX *ctx, const BYTE data[], size_t len)
 {
-	WORD i;
+	uint32_t i;
 
 	size_t rounded = 64*(len/64);
 	if(rounded != 0) {
@@ -593,7 +593,7 @@ void sha256_update(SHA256_CTX *ctx, const BYTE data[], size_t len)
 
 void sha256_final(SHA256_CTX *ctx, BYTE hash[])
 {
-	WORD i;
+	uint32_t i;
 
 	i = ctx->datalen;
 

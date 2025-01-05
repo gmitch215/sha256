@@ -18,13 +18,12 @@
 
 /**************************** DATA TYPES ****************************/
 typedef uint8_t  BYTE;             // 8-bit byte
-typedef uint32_t WORD;             // 32-bit word, change to "long" for 16-bit machines
 
 typedef struct {
 	BYTE data[64];
-	WORD datalen;
+	uint32_t datalen;
 	unsigned long long bitlen;
-	WORD state[8];
+	uint32_t state[8];
 } SHA256_CTX;
 
 /*********************** FUNCTION DECLARATIONS **********************/
